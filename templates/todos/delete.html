@@ -1,0 +1,14 @@
+{% extends "shared.html" %}
+
+{% block content %}
+<div class="container mx-auto mt-8">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto">
+        <h1 class="text-3xl font-bold mb-4">Delete Todo</h1>
+        <p class="mb-4">Are you sure you want to delete "{{ object.title }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

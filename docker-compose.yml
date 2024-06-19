@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  mysql:
+    container_name: mydb
+
+    image: mysql:latest
+
+    ports:
+      - 3306:3306
+    
+    environment:
+      # MYSQL_USER: root
+      MYSQL_DATABASE: test1
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_PASSWORD: 123
+
+  server:
+    container_name: myapp
+    restart: always
+    links:
+      - mysql
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - mysql
+
