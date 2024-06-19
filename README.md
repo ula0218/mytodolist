@@ -1,5 +1,10 @@
 # TODO LIST
 
+## host
+```
+http://ulatodolist.ddns.net/
+```
+
 ## Setup Instructions
 
 ### 1. Create .env file
