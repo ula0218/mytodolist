@@ -82,8 +82,8 @@ my-server-1@54.238.208.159: Permission denied (publickey).
 ```
 sudo su -
 snap install docker
-git clone https://github.com/BurkeyLai/ula-todo-list.git
-cd ula-todo-list
+git clone https://github.com/ula0218/mytodolist.git
+cd mytodolist
 ```
 
 * 這裏 app 的 EXPOSE port 直接對應到 EC2 instance 的 http listen 的 `80`。若要讓 https listen 的 `443` 也能訪問，EXPOSE port 改成其他 port，然後要用 nginx 反向代理。
